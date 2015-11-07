@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	//alert("1"); //Test to make sure its working
 
 
 	//MENU SLIDER
@@ -12,16 +11,23 @@ $(document).ready(function() {
 
 
 	//BOX CAPTIONS
-	$('.box').mouseenter( function () { 
-		$(this + '.caption').fadeToggle( "fast" );
+	$('.box').hover( 
+		function () { 
+			$(this).find('.caption').slideDown(250);
+		},
+		function () {
+			$(this).find('.caption').slideUp(250);
+		}
+	
+	);
+
+	$(document).ready(function(){
+		$('#slider1') .cycle({
+			fx: 'fade', // here change effect to blindX, blindY, blindZ etc 
+			speed: 'slow', 
+			timeout: 2000 
+		});
 	});
-	$('.box').mouseleave(function() {
-		 $('.box + .caption').fadeToggle( "fast" );
-	});
-
-
-	// $('.box').css('background-image', 'url(' + url goes here + ')');
-
 
 
 });
