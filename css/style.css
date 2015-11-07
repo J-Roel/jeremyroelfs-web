@@ -14,9 +14,8 @@ body {
 
 }
 .bg-filler {
-	position: absolute;
+	position: fixed;
 	top:0; left:0; bottom:0; right:0;
-	
 	z-index: -1;
 
 	background: rgb(81,95,106);
@@ -27,7 +26,18 @@ body {
 	background: -ms-linear-gradient(-45deg,  rgba(81,95,106,1) 0%,rgba(35,47,59,1) 39%,rgba(0,0,0,1) 77%);
 	background: linear-gradient(135deg,  rgba(81,95,106,1) 0%,rgba(35,47,59,1) 39%,rgba(0,0,0,1) 77%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515f6a', endColorstr='#000000',GradientType=1 );
+}
 
+.rndPic {
+	
+	width:100%;
+	height: 700px;
+	z-index: 50;
+	margin-top: 80px;
+	
+	
+	background-image:url("../images/common/bkgrnds/squares-1.png");
+	background-repeat: no-repeat;
 
 }
 
@@ -35,11 +45,31 @@ header {
 
 }
 main {
-	padding-top: 5%;
+
 }
 
 footer {
 	
+}
+section {
+	border-radius:2%;
+	padding-top: 5%;
+	background-color: #EDEDED;
+	box-shadow: 2px 2px 8px 4px #000;
+	width:100%px;
+	height:150px;
+}
+
+.other {
+	background-color: #000;
+}
+svg {
+  display: block;
+  width: 100%;
+  height: 90px;
+
+  background-color: #EDEDED;
+  /*box-shadow: 2px 2px 8px 4px #000;*/
 }
 
 /* LOGO -------------------- LOGO */
@@ -96,7 +126,10 @@ footer {
 }
 
 
-
+.picture{
+	width: 100px;
+	height: 100px;
+}
 
 
 
@@ -112,6 +145,7 @@ footer {
 	/*box-shadow: 0 0 0 8px #EDEDED;*/
 	box-shadow: 2px 2px 8px 4px #000;
 	background-color: #EDEDED;
+	background-image:url("images/home/jroel.jpg");
 
 	transition: box-shadow 0.5s, border-radius 0.5s;
 
@@ -121,19 +155,15 @@ footer {
 	border-radius: 5%;
 }
 
-.box:before{
-	content: "";
-	display: block;
-	padding-top: 100%; 	/* initial ratio of 1:1*/
-}
 
-.abox { width: 130px; height: 130px; left:70px; top:207px;  }
-.bbox { width: 130px; height: 135px; left:240px; top:167px;  }
-.cbox { width: 130px; height: 135px; left:410px; top:167px; }
-.dbox { width: 170px; height: 170px; left:30px; top:387px;  }
-.ebox { width: 130px; height: 130px; left:240px; top:350px; }/*connect*/
-.fbox { width: 130px; height: 130px; left:240px; top:530px; }
-.gbox { width: 230px; height: 230px; left:410px; top:350px; }
+
+.abox { width: 130px; height: 130px; left:160px; top:227px; z-index:100; }
+.bbox { width: 130px; height: 135px; left:280px; top:237px; z-index:30;}
+.cbox { width: 130px; height: 135px; left:450px; top:227px; z-index:20;}/*Blog*/
+.dbox { width: 170px; height: 170px; left:120px; top:387px;  }/*Projects*/
+.ebox { width: 150px; height: 140px; left:280px; top:350px; z-index: 50;}/*connect*/
+.fbox { width: 130px; height: 130px; left:280px; top:530px; z-index: 70;}
+.gbox { width: 230px; height: 230px; left:390px; top:340px; }/*Resources*/
 
 
 .box-img {
@@ -144,14 +174,14 @@ footer {
 .caption {
 	display: none;
 	width:100%;
-	z-index: 50;
+	z-index: 20;
 	position: absolute;
 	text-align: center;
 	bottom:0;
 	left: 0;
 
 	background-color: #000;
-	opacity: 0.2;
+	opacity: 0.7;
 	
 }
 .caption h2 {
@@ -163,12 +193,6 @@ footer {
 
 
 /*COLUMNS-------------------COLUMNS*/
-
-/*FOR TEST PURPOSES */
-/*.gcol-1n, .gcol-2n, .gcol-3n, .gcol-4n, .gcol-5n, .gcol-6n, .gcol-7n, .gcol-8n, .gcol-9n, .gcol-10n, .gcol-11n, .gcol-12n {
-  	border: 1px solid #fff;
-}*/
-
 .wrapper {
   width: 90%;
   margin: auto;
@@ -178,7 +202,9 @@ footer {
 	display:table;
 	clear:both;
 }
-
+.clear {
+	clear:both;
+}
 
 
 /*IMAGES---------------------------------------------IMAGES*/
@@ -218,8 +244,8 @@ h3 {
 	color: #000;
 }
 p {
-	font-family: 'League Gothic Condensed', sans-serif;
-	font-size: 1.4em;
+	font-family: 'League Gothic', sans-serif;
+	font-size: 2.5em;
 	color: #000;
 }
 
